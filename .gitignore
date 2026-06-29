@@ -1,0 +1,16 @@
+/target/
+**/target/
+
+.DS_Store
+Thumbs.db
+.directory
+
+.idea/
+.vscode/
+
+node_modules/
+dist/
+build/
+apps/desktop/src-tauri/gen/
+
+*.log

@@ -1,0 +1,17 @@
+[workspace]
+members = [
+    "crates/pub-core",
+    "apps/desktop/src-tauri",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+repository = "https://github.com/ThePoNGz/Pong-s-Utility-Box"
+rust-version = "1.77"
+
+[workspace.dependencies]
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+tauri = { version = "2", features = [] }
+tauri-build = { version = "2", features = [] }

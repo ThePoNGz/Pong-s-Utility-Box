@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Pong's Utility Box",
+  "version": "0.1.0",
+  "identifier": "com.thepongz.pub",
+  "build": {
+    "frontendDist": "../ui"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "Pong's Utility Box",
+        "width": 1040,
+        "height": 720,
+        "minWidth": 760,
+        "minHeight": 560,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "category": "Utility",
+    "shortDescription": "A practical desktop utilities box.",
+    "longDescription": "Pong's Utility Box is a Rust desktop app for common quality-of-life download and conversion tasks."
+  }
+}

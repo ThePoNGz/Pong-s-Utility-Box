@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pong's Utility Box</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./main.js"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-label="Utility queue">
+        <div class="brand-row">
+          <div>
+            <p class="eyebrow">Pong's Utility Box</p>
+            <h1>Drop files or paste links.</h1>
+          </div>
+          <button class="icon-button" id="clear-button" type="button" title="Clear queue" aria-label="Clear queue">
+            Clear
+          </button>
+        </div>
+
+        <label class="url-entry" for="url-input">
+          <span>Link</span>
+          <div class="entry-row">
+            <input id="url-input" type="url" placeholder="Paste a YouTube, TikTok, Instagram, Reddit, or other link" autocomplete="off" />
+            <button id="add-link-button" type="button">Add</button>
+          </div>
+        </label>
+
+        <div class="drop-zone" id="drop-zone">
+          <div>
+            <strong>Drag files here</strong>
+            <span>Videos, audio, images, archives, and documents will land in the same queue.</span>
+          </div>
+        </div>
+
+        <section class="queue-panel" aria-label="Queued items">
+          <div class="panel-header">
+            <h2>Queue</h2>
+            <span id="queue-count">0 items</span>
+          </div>
+          <ul id="queue-list" class="queue-list"></ul>
+        </section>
+      </section>
+
+      <aside class="action-panel" aria-label="Job settings">
+        <h2>Action</h2>
+        <div class="segmented-control" role="tablist" aria-label="Utility type">
+          <button class="active" type="button">Download</button>
+          <button type="button">Convert</button>
+          <button type="button">Inspect</button>
+        </div>
+
+        <label class="field">
+          <span>Output mode</span>
+          <select>
+            <option>Auto</option>
+            <option>Video</option>
+            <option>Audio only</option>
+            <option>Image</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Quality</span>
+          <select>
+            <option>Best available</option>
+            <option>1080p</option>
+            <option>720p</option>
+            <option>Audio best</option>
+          </select>
+        </label>
+
+        <button id="preview-button" class="primary-action" type="button">Preview Job</button>
+
+        <div class="status-box" id="status-box">
+          <strong>Ready</strong>
+          <span>Add a link or file to test the Rust backend bridge.</span>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>

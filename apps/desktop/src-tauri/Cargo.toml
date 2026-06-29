@@ -1,0 +1,22 @@
+[package]
+name = "pub-desktop"
+version = "0.1.0"
+edition.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "pub_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[[bin]]
+name = "pub"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build.workspace = true
+
+[dependencies]
+pub-core = { path = "../../../crates/pub-core" }
+serde.workspace = true
+tauri.workspace = true
